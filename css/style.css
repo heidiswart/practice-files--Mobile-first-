@@ -1,5 +1,24 @@
 @charset "utf-8";
 
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    color: #666;
+    border-color: #666;
+    font-family: "droid_sans", Helvetica, Arial, sans-serif;
+}
+
 /*Custom Fonts*/
 @font-face {
     font-family: 'droid_sans';
@@ -23,3 +42,104 @@
     font-style: normal;
 
 }
+
+/*Page Layout*/
+.row:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.column {
+    width: 100%;
+    color: #666;
+}
+
+header {
+    width: auto;
+    height: auto;
+    overflow: auto;
+    background-color: #fff;
+}
+
+a.logo {
+    display: block;
+    width: 80px;
+    height: auto;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+
+a.logo img {
+    width: 100%
+    height: auto;
+}
+
+a.menuBtn {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../images/menu.png);
+    background-position: 0 0;
+    float: right;
+    margin: 10px;
+}
+
+a.menuBtn:hover {
+    background-position: 0px -65px;
+}
+
+nav {
+    width: auto;
+    height: 195px; /*auto or a fixed height or a fixed height if animated */
+    transition: all .5s ease-out;
+    overflow: hidden;
+}
+
+/*nav closed on default*/
+nav.default {
+    /*display:none; or height if you want to animate it*/
+    height: 0;
+}
+
+nav a {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 20px;
+
+    background: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    border-bottom: 1px solid #666;
+
+}
+
+nav a:first-child {
+    border-top: 1px solid #666;
+}
+
+nav a:hover, nav a:active {
+    background: #ccc;
+    color: #333;
+}
+
+
+section.intro {
+    height: 200px;
+    background-image: url(../images/banner_sml.jpg); 
+    background-size: cover;
+}
+
+.herotext {
+    color: #fff;
+    font-size: 2.0rem;
+}
+
+.btn-readmore {
+    color: #fff;
+    text-decoration: none;
+}
+

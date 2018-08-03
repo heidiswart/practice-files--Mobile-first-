@@ -2,27 +2,94 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Responsive layout Example</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <title>Responsive layout Example</title>
+	
+   
 	<!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
+	<link rel="icon" type="image/png" href="images/favicon.png">
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/menu.js"></script>
 </head>
 
 <body>
 	<header>
-		<nav>
+		<div class="row">
+			<a class="logo" href="javascript:void(0)">
+			<img src="images/logo.png" alt="Logo_image">
+			</a>
+			<a class="menuBtn" href="javascript:void(0)" id="toggle"></a>
+		</div>
+
+		<nav class="default">
+			<a href="#about-me">About Me</a>
+			<a href="#services">Services</a>
+			<a href="#contact-me">Contact Me</a>
 			
 		</nav>
+		
+
 	</header>
 	
 	<div class="container"> 
-		<section></section>
-		<section></section>
+		<section class="intro herotext">The Responsive Cat Enthusiast
+			<a href="#" class="btn-readmore">Read More</a>
+		</section>
+
+		<section class="about">
+			<p>About Me</p>
+
+			<p> The domestic cat is a small, typically furry, carnivorous mammal. They are often
+      called house cats when kept as indoor pets or simply cats when there is no need to distinguish
+       them from other felids and felines. Cats are awesome, I love them very much. Please follow
+       on twitter, I am so lonely.</p>
+
+			</section>
+
+		<section class="services"> 
+			<p> Services </p>
+
+			<div class="column">
+				<p> Kitten Entertainment </p>
+
+				<p> Get a cat they said. it'll be fun they said. Well, they were right. Cats are awesome! </p>
+
+				</div>
+
+			<div class="column">
+
+				<p>Kitten Counselling</p>
+
+				<p> Wish you had a secret decoder guide to cat behavior and cat language? Heres a primer to things your car wishes you understood. </p>
+
+				</div>
+
+			<div class="column">
+
+			<p>Kitten Rehabilitation</p>
+
+			<p> Your cat's online owners manual, featuring articles about breed information, cat selection, training, grooming and care for cats and kittens.</p>
+
+			</div>
+
+		</section>
+
+		<section class="contact">
+			<p> Contact Me </p>
+
+			<p> Get in touch with me if you'd like to come visit - I'd love to show you around! </p>
+
+			<p> Email: kittencare@rwd.co.za </p>
+
+			<p> Mobile: 082 123 4567</p>
+
+
+
+			</section>
+
 		<footer></footer>
 	</div>
 
