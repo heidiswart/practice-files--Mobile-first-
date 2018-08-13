@@ -55,6 +55,11 @@ body {
     color: #666;
 }
 
+div.container {
+    min-width: 360px;
+    height: auto;
+}
+
 header {
     width: auto;
     height: auto;
@@ -91,7 +96,7 @@ a.menuBtn:hover {
 
 nav {
     width: auto;
-    height: 195px; /*auto or a fixed height or a fixed height if animated */
+    height: 195px; /*auto or a fixed height if animated */
     transition: all .5s ease-out;
     overflow: hidden;
 }
@@ -131,21 +136,36 @@ section.intro {
     height: 200px;
     background-image: url(../images/banner_sml.jpg); 
     background-size: cover;
+    padding: 20% 0;
 }
 
-.herotext {
+section p.herotext {
     color: #fff;
     font-size: 2.1rem;
     text-align: center;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
     text-align: center;
 }
 
-
 .btn-readmore {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 2.0rem;
+    color: #fff;
+    text-decoration: none;
+    background: none;
+}
+
+/*.btn-readmore {
     display: inline-block; 
     padding: 10px;
     width: 150px;
@@ -156,7 +176,7 @@ section.intro {
     color: #fff;
     text-decoration: none;
     background: none;
-}
+}*/
 
 .btn-readmore:hover, .btn-readmore:active {
     background: #fff;
@@ -190,8 +210,11 @@ section.intro {
 }
 
 section img {
-    height: 354px;
-    margin: 10px;
+    width: 95%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 section p.text {
@@ -217,6 +240,65 @@ footer {
     text-align: center;
 }
 
+/*Desktop Version CSS*/
+@media only screen and (min-width: 1025px) {
+    div.container {
+        margin-left: 250px;
+        max-width: 1500px;
+        box-shadow: 5px 0px 30px rgba (0,0,0,.3);
+    }
+
+    header {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        box-shadow: 5px 0px 10px rgba (0,0,0,.5);
+    }
+
+    a.logo {
+        width: 150px;
+        margin: 20px auto;
+        float:none;
+    }
+
+    a.menuBtn{
+        display: none;
+    }
+
+    nav.default{
+        height: auto;
+        overflow: auto;
+    }
+
+    nav a{
+        border-bottom:1px solid #999;
+        background: #fff;
+        padding: 10px;
+    }
+
+    section.intro {
+        height: 500px;
+        background-image: url(../images/banner_lrg.jpg);
+    }
+
+    section.services{
+        max-height: 1000px;
+        margin: 0 auto;
+    }
+
+    .column {
+        width: 33.3%;
+    }
+
+    .row {
+        display: flex;      
+    }
+}
+
+/*Tablet Version CSS*/
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    
+}
 
 
 
